@@ -27,11 +27,11 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"tape": "~3.4.0",
-		"covert": "1.0.0",
-		"jscs": "~1.10.0",
-		"nsp": "~1.0.0",
-		"semver": "~4.2.0"
+		"tape": "^3.5.0",
+		"covert": "^1.0.1",
+		"jscs": "^1.12.0",
+		"nsp": "^1.0.1",
+		"semver": "^4.3.3"
 	},
 	"testling": {
 		"files": "test/index.js",
