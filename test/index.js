@@ -14,8 +14,11 @@ var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
 var debug = function (value, msg) {
 	var output = '';
 	if (hasSymbols) {
-		try { output += String(value); }
-		catch (e) { output += Symbol.prototype.toString.call(value); }
+		try {
+			output += String(value);
+		} catch (e) {
+			output += Symbol.prototype.toString.call(value);
+		}
 		if (output === '') {
 			output = JSON.stringify(value);
 		}

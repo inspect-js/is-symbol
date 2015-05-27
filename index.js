@@ -24,6 +24,6 @@ if (hasSymbols) {
 
 	module.exports = function isSymbol(value) {
 		// this environment does not support Symbols.
-		return false;
+		return false && value;
 	};
 }
