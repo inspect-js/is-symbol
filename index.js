@@ -10,6 +10,7 @@ if (hasSymbols) {
 		if (typeof value.valueOf() !== 'symbol') { return false; }
 		return symStringRegex.test(symToStr.call(value));
 	};
+
 	module.exports = function isSymbol(value) {
 		if (typeof value === 'symbol') { return true; }
 		if (toStr.call(value) !== '[object Symbol]') { return false; }
@@ -20,6 +21,7 @@ if (hasSymbols) {
 		}
 	};
 } else {
+
 	module.exports = function isSymbol(value) {
 		// this environment does not support Symbols.
 		return false;
