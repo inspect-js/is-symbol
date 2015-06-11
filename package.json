@@ -33,8 +33,8 @@
 		"covert": "^1.1.0",
 		"jscs": "^1.13.1",
 		"nsp": "^1.0.1",
-		"semver": "^4.3.4",
-		"eslint": "^0.21.2"
+		"semver": "^4.3.6",
+		"eslint": "^0.22.1"
 	},
 	"testling": {
 		"files": "test/index.js",
