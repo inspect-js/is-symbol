@@ -81,9 +81,10 @@ test('faked symbol values', function (t) {
 
 test('Symbol support', { skip: !hasSymbols }, function (t) {
 	t.test('well-known Symbols', function (st) {
-		var wellKnownSymbols = Object.getOwnPropertyNames(Symbol).filter(function filterer(name) {
+		var isWellKnown = function filterer(name) {
 			return name !== 'for' && name !== 'keyFor' && !(name in filterer);
-		});
+		};
+		var wellKnownSymbols = Object.getOwnPropertyNames(Symbol).filter(isWellKnown);
 		wellKnownSymbols.forEach(function (name) {
 			var sym = Symbol[name];
 			st.equal(true, isSymbol(sym), debug(sym, ' is a symbol'));
