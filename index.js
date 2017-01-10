@@ -1,19 +1,25 @@
 'use strict';
 
 var toStr = Object.prototype.toString;
-var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
+var hasSymbols = typeof Symbol === 'function' && typeof Symbol('x') === 'symbol';
 
 if (hasSymbols) {
 	var symToStr = Symbol.prototype.toString;
 	var symStringRegex = /^Symbol\(.*\)$/;
-	var isSymbolObject = function isSymbolObject(value) {
-		if (typeof value.valueOf() !== 'symbol') { return false; }
+	var isSymbolObject = function isRealSymbolObject(value) {
+		if (typeof value.valueOf() !== 'symbol') {
+			return false;
+		}
 		return symStringRegex.test(symToStr.call(value));
 	};
 
 	module.exports = function isSymbol(value) {
-		if (typeof value === 'symbol') { return true; }
-		if (toStr.call(value) !== '[object Symbol]') { return false; }
+		if (typeof value === 'symbol') {
+			return true;
+		}
+		if (toStr.call(value) !== '[object Symbol]') {
+			return false;
+		}
 		try {
 			return isSymbolObject(value);
 		} catch (e) {
