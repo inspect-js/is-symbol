@@ -96,7 +96,7 @@ test('Symbol support', { skip: !hasSymbols }, function (t) {
 		var symbols = [
 			Symbol(),
 			Symbol('foo'),
-			Symbol.for('foo'),
+			Symbol['for']('foo'),
 			Object(Symbol('object'))
 		];
 		symbols.forEach(function (sym) {
