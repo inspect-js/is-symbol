@@ -10,27 +10,8 @@ var forEach = function (arr, func) {
 	}
 };
 
-var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
-var debug = function (value, msg) {
-	var output = '';
-	if (hasSymbols) {
-		try {
-			output += String(value);
-		} catch (e) {
-			output += Symbol.prototype.toString.call(value);
-		}
-		if (output === '') {
-			output = JSON.stringify(value);
-		}
-	}
-	var type = Object.prototype.toString.call(value).toLowerCase().slice(8, -1);
-	output += ' (' + type;
-	var typeOf = typeof value;
-	if (type !== typeOf) {
-		output += ', typeof: ' + typeOf;
-	}
-	return output + ') ' + msg;
-};
+var hasSymbols = require('has-symbols')();
+var debug = require('object-inspect');
 
 test('non-symbol values', function (t) {
 	var nonSymbols = [

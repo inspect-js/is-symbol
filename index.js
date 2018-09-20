@@ -1,7 +1,7 @@
 'use strict';
 
 var toStr = Object.prototype.toString;
-var hasSymbols = typeof Symbol === 'function' && typeof Symbol('x') === 'symbol';
+var hasSymbols = require('has-symbols')();
 
 if (hasSymbols) {
 	var symToStr = Symbol.prototype.toString;
