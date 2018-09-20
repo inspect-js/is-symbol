@@ -1,9 +1,10 @@
 {
 	"name": "is-symbol",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Determine if a value is an ES6 Symbol or not.",
 	"main": "index.js",
 	"scripts": {
+		"prepublish": "safe-publish-latest",
 		"pretest": "npm run lint",
 		"tests-only": "node --es-staging --harmony test",
 		"test": "npm run tests-only",
@@ -39,6 +40,7 @@
 		"jscs": "^3.0.7",
 		"nsp": "^3.2.1",
 		"object-inspect": "^1.6.0",
+		"safe-publish-latest": "^1.1.2",
 		"semver": "^5.5.0",
 		"tape": "^4.9.0"
 	},
