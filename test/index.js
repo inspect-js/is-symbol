@@ -11,7 +11,8 @@ var forEach = function (arr, func) {
 };
 
 var hasSymbols = require('has-symbols')();
-var debug = require('object-inspect');
+var inspect = require('object-inspect');
+var debug = function (v, m) { return inspect(v) + ' ' + m; };
 
 test('non-symbol values', function (t) {
 	var nonSymbols = [
