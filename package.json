@@ -10,9 +10,7 @@
 		"test": "npm run tests-only",
 		"posttest": "npm run security",
 		"coverage": "covert test",
-		"lint": "npm run jscs && npm run eslint",
-		"jscs": "jscs *.js */*.js",
-		"eslint": "eslint",
+		"lint": "eslint .",
 		"security": "nsp check"
 	},
 	"repository": {
@@ -37,7 +35,6 @@
 		"@ljharb/eslint-config": "^13.0.0",
 		"covert": "^1.1.0",
 		"eslint": "^5.6.0",
-		"jscs": "^3.0.7",
 		"nsp": "^3.2.1",
 		"object-inspect": "^1.6.0",
 		"safe-publish-latest": "^1.1.2",
