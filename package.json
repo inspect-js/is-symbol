@@ -1,6 +1,6 @@
 {
 	"name": "is-symbol",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Determine if a value is an ES6 Symbol or not.",
 	"main": "index.js",
 	"scripts": {
