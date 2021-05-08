@@ -33,7 +33,7 @@
 		"url": "https://github.com/inspect-js/is-symbol/issues"
 	},
 	"dependencies": {
-		"has-symbols": "^1.0.1"
+		"has-symbols": "^1.0.2"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^17.6.0",
