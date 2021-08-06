@@ -11,6 +11,7 @@ var forEach = function (arr, func) {
 };
 
 var hasSymbols = require('has-symbols')();
+var hasToStringTag = require('has-tostringtag/shams')();
 var inspect = require('object-inspect');
 var debug = function (v, m) { return inspect(v) + ' ' + m; };
 
@@ -45,7 +46,7 @@ test('faked symbol values', function (t) {
 		st.end();
 	});
 
-	t.test('faked @@toStringTag', { skip: !hasSymbols || !Symbol.toStringTag }, function (st) {
+	t.test('faked @@toStringTag', { skip: !hasToStringTag }, function (st) {
 		var fakeSymbol = { valueOf: function () { return Symbol('foo'); } };
 		fakeSymbol[Symbol.toStringTag] = 'Symbol';
 		st.equal(false, isSymbol(fakeSymbol), 'object with fake Symbol @@toStringTag and valueOf returning a symbol is not a symbol');

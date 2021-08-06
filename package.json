@@ -40,6 +40,7 @@
 		"aud": "^1.1.5",
 		"auto-changelog": "^2.2.1",
 		"eslint": "^7.26.0",
+		"has-tostringtag": "^1.0.0",
 		"nyc": "^10.3.2",
 		"object-inspect": "^1.10.3",
 		"safe-publish-latest": "^1.1.4",
