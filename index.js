@@ -1,23 +1,25 @@
 'use strict';
 
-var toStr = Object.prototype.toString;
+var callBound = require('call-bind/callBound');
+var $toString = callBound('Object.prototype.toString');
 var hasSymbols = require('has-symbols')();
+var safeRegexTest = require('safe-regex-test');
 
 if (hasSymbols) {
-	var symToStr = Symbol.prototype.toString;
-	var symStringRegex = /^Symbol\(.*\)$/;
+	var $symToStr = callBound('Symbol.prototype.toString');
+	var isSymString = safeRegexTest(/^Symbol\(.*\)$/);
 	var isSymbolObject = function isRealSymbolObject(value) {
 		if (typeof value.valueOf() !== 'symbol') {
 			return false;
 		}
-		return symStringRegex.test(symToStr.call(value));
+		return isSymString($symToStr(value));
 	};
 
 	module.exports = function isSymbol(value) {
 		if (typeof value === 'symbol') {
 			return true;
 		}
-		if (toStr.call(value) !== '[object Symbol]') {
+		if ($toString(value) !== '[object Symbol]') {
 			return false;
 		}
 		try {
