@@ -8,6 +8,8 @@ var safeRegexTest = require('safe-regex-test');
 if (hasSymbols) {
 	var $symToStr = callBound('Symbol.prototype.toString');
 	var isSymString = safeRegexTest(/^Symbol\(.*\)$/);
+
+	/** @type {(value: object) => value is Symbol} */
 	var isSymbolObject = function isRealSymbolObject(value) {
 		if (typeof value.valueOf() !== 'symbol') {
 			return false;
@@ -15,6 +17,7 @@ if (hasSymbols) {
 		return isSymString($symToStr(value));
 	};
 
+	/** @type {import('.')} */
 	module.exports = function isSymbol(value) {
 		if (typeof value === 'symbol') {
 			return true;
@@ -29,7 +32,7 @@ if (hasSymbols) {
 		}
 	};
 } else {
-
+	/** @type {import('.')} */
 	module.exports = function isSymbol(value) {
 		// this environment does not support Symbols.
 		return false && value;
