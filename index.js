@@ -19,7 +19,7 @@ if (hasSymbols) {
 		if (typeof value === 'symbol') {
 			return true;
 		}
-		if ($toString(value) !== '[object Symbol]') {
+		if (!value || typeof value !== 'object' || $toString(value) !== '[object Symbol]') {
 			return false;
 		}
 		try {
