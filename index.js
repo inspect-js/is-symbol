@@ -1,6 +1,6 @@
 'use strict';
 
-var callBound = require('call-bind/callBound');
+var callBound = require('call-bound');
 var $toString = callBound('Object.prototype.toString');
 var hasSymbols = require('has-symbols')();
 var safeRegexTest = require('safe-regex-test');
