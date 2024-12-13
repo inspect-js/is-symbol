@@ -35,9 +35,9 @@
 		"url": "https://github.com/inspect-js/is-symbol/issues"
 	},
 	"dependencies": {
-		"call-bind": "^1.0.7",
-		"has-symbols": "^1.0.3",
-		"safe-regex-test": "^1.0.3"
+		"call-bind": "^1.0.8",
+		"has-symbols": "^1.1.0",
+		"safe-regex-test": "^1.1.0"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.1",
