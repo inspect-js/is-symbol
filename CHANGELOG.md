@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1](https://github.com/inspect-js/is-symbol/compare/v1.1.0...v1.1.1) - 2024-12-12
+
+### Commits
+
+- [actions] re-add finishers [`9b9d06f`](https://github.com/inspect-js/is-symbol/commit/9b9d06f571cf5b8481216b32474b567b02b14ae3)
+- [Deps] update `call-bind`, `has-symbols`, `safe-regex-test` [`07f3647`](https://github.com/inspect-js/is-symbol/commit/07f36476b69e98353c09dc58cbcab8891e3ed2b7)
+- [Refactor] use `call-bound` directly [`799402d`](https://github.com/inspect-js/is-symbol/commit/799402d3b0f291981b6406ec92c8c45cdad4e75e)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/tsconfig` [`4b8b2f9`](https://github.com/inspect-js/is-symbol/commit/4b8b2f9e844ebac93e89cf8e88e08ae0e8f4cc7f)
+- [types] remove unneeded DT packages [`398abaa`](https://github.com/inspect-js/is-symbol/commit/398abaaea5a6192cd0eb9fda5f0a3cfb5b1da845)
+
 ## [v1.1.0](https://github.com/inspect-js/is-symbol/compare/v1.0.4...v1.1.0) - 2024-12-02
 
 ### Commits
