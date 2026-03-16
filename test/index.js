@@ -46,6 +46,12 @@ test('faked symbol values', function (t) {
 		var notSoFakeSymbol = { valueOf: function () { return 42; } };
 		notSoFakeSymbol[Symbol.toStringTag] = 'Symbol';
 		st.equal(isSymbol(notSoFakeSymbol), false, 'object with fake Symbol @@toStringTag and valueOf not returning a symbol is not a symbol');
+
+		/** @type {{ valueOf(): never; [Symbol.toStringTag]?: unknown }} */
+		var throwingSymbol = { valueOf: function () { throw new Error('nope'); } };
+		throwingSymbol[Symbol.toStringTag] = 'Symbol';
+		st.equal(isSymbol(throwingSymbol), false, 'object with fake Symbol @@toStringTag and throwing valueOf is not a symbol');
+
 		st.end();
 	});
 
