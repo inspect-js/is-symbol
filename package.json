@@ -35,7 +35,7 @@
 		"url": "https://github.com/inspect-js/is-symbol/issues"
 	},
 	"dependencies": {
-		"call-bound": "^1.0.2",
+		"call-bound": "^1.0.4",
 		"has-symbols": "^1.1.0",
 		"safe-regex-test": "^1.1.0"
 	},
